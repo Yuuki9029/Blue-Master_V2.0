@@ -405,6 +405,7 @@ input::placeholder{
 .footer-navigation-right{
     width: 33.33%;
     float: left;
+    position: relative;
 }
 .footer-navigation-left:before,
 .footer-navigation-left:after{
@@ -476,6 +477,15 @@ input::placeholder{
     position: relative;
     top: 6px;
     left: 59px;
+}
+.square{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 282px;
+    top: 56px;
+    border-right: 15px solid transparent;
+    border-bottom: 17px solid #191f2f;
 }
 .twitter-contact{
     background: #191f2f;
