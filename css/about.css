@@ -131,8 +131,8 @@ input::placeholder{
     background: url(/image/icon/Icon-Top/search-icon.png) no-repeat;
     border: 0;
     position: relative;
-    top: 11px;
-    right: 32px;
+    top: 10px;
+    right: 31px;
     cursor: pointer;
 }
 @media screen and (max-width: 768px){
@@ -309,7 +309,7 @@ input::placeholder{
     height: auto;
 }
 .icon-brower{
-    padding: 20px 20px 11px 20px;
+    padding: 20px 20px 6px 20px;
 }
 .guest-content{
     padding: 0 20px 21px 22px;
@@ -375,21 +375,36 @@ input::placeholder{
     margin: 0;
 }
 .categories-list li{
-    width: 100%;
     padding-bottom: 10px;
     display: block;
 }
 .categories-list li a{
     color:#747c93;
-    display: inline-block;
 }
 .categories-list li a:hover{
     color: #97a5d1;
 }
 .categories-list li span{
     color: #444d68;
-    text-align: right;
+}
+.categories-list li {
+    overflow: hidden;
+}
+.categories-list li .cate-link {
+    float: left;
+    width: 100%;
+    margin:0 -40px 0 0;
+}
+.categories-list li .cate-link a {
+    display: block;
+    margin:0 40px 0 0;
+}
+.categories-list li .cate-number {
+    display: block;
+    width: 30px;
     float: right;
+    text-align: right;
+    margin: 0;
 }
 /* End Box Categories */
 .blog-top{
@@ -398,13 +413,13 @@ input::placeholder{
 .blog-list{
     margin: 0;
     width: 100%;
-    padding: 21px 22px 11px 19px;
+    padding: 21px 22px 12px 19px;
     font-weight: bolder;
     font-size: 14px;
 }
 .blog-list li{
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     display: inline-block;
 }
 .blog-list li a{
@@ -419,7 +434,21 @@ input::placeholder{
     text-align: right;
     float: right;
 }
-
+.blog-list .blog-link{
+    float: left;
+    margin: 0 -40px 0 0;
+}
+.blog-list li .blog-link a{
+    display: block;
+    margin: 0 40px 0 0;
+}
+.blog-list li .blog-number{
+    display: block;
+    width: 30px;
+    float: right;
+    text-align: right;
+    margin: 0;
+}
 /* End box Blog */
 .network-top{
     background: #9097a9 url(/image/icon/side/5.png) no-repeat 12px 12px;
@@ -428,7 +457,7 @@ input::placeholder{
     list-style: none;
     margin: 0px -5px;
     overflow: hidden;
-    padding: 20px 15px 31px;
+    padding: 20px 15px 32px;
 }
 .network-list li{
     float: left;
@@ -463,29 +492,38 @@ input::placeholder{
     content: '';
     display: table;
 }
+
 .footer-navigation:after{
     clear: both;
 }
-.footer-navigation-left{
-    width: 33.33%;
-    float: left;
-}
+
 .footer-navigation ul{
     margin: 0;
     padding: 0;
 }
-.footer-navigation-center{
-    width: 33.33%;
-    float: left;
-    padding-left: 22px;
-}
+
 .footer-navigation-center h3{
     padding-bottom: 22px;
 }
-.footer-navigation-right{
-    width: 33.33%;
-    float: left;
-    position: relative;
+
+@media all and (min-width: 1000px){
+    .footer-navigation-left{
+        width: 33.33%;
+        float: left;
+    }
+    .footer-navigation-center{
+        width: 33.33%;
+        float: left;
+        padding-left: 22px;
+    }
+    .footer-navigation-right{
+        width: 33.33%;
+        float: left;
+        position: relative;
+    }
+}
+@media screen and(max-width: 768px){
+
 }
 .footer-navigation-left:before,
 .footer-navigation-left:after{
