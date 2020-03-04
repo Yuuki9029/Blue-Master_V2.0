@@ -24,7 +24,11 @@ h2{
 .container{
     width: 951px;
     margin: 0 auto;
-    overflow: hidden;
+}
+.container:after {
+    content: "";
+    clear: both;
+    display: table;
 }
 /* Heaader */
 .header-top-wrapper{
@@ -87,7 +91,6 @@ h2{
 .header-right{
     padding: 0;
     float: right;
-    margin-right: -27px;
 }
 .social-network{
     float: left;
@@ -102,11 +105,14 @@ h2{
 
 }
 .list-social-network img{
-    max-width: 100%;
-    height: auto;
+    width: 16px;
+    height: 16px;
 }
 .search{
     float: left;
+}
+.form-header{
+    position: relative;
 }
 .search-field{
     border-radius: 10px;
@@ -115,7 +121,7 @@ h2{
     background-color: #121314;
     border: 1px solid #1f2223;
     color: #38444f;
-    margin: 11px 0 11px;
+    margin: 10px 0 12px;
     padding: 2px 0px 5px 6px;
 }
 input[type="search"]{
@@ -130,14 +136,14 @@ input::placeholder{
     height: 24px;
     background: url(/image/icon/Icon-Top/search-icon.png) no-repeat;
     border: 0;
-    position: relative;
-    top: 10px;
-    right: 31px;
+    position: absolute;
+    top: 15px;
+    right: 5px;
     cursor: pointer;
 }
 @media screen and (max-width: 768px){
     .container{
-        width: 80%;
+        width: 100%;
     }
 }
 /* End Header Top */
@@ -152,34 +158,36 @@ input::placeholder{
 .header-navigation{
     margin-bottom: 23px;
 }
-
-@media all and (min-width: 1000px){
-    .logo{
-        float: left;
-        position: relative;
-        display: block;
-        text-indent: -99999px;
-        width: 272px;
-        height: 60px;
-        background: url(/image/Logo.png) no-repeat;
-        overflow: hidden;
-        margin-left: -3px;
-    }
-    #menu{
-        float: right;
-    }
-    .menu-list li{ 
-        display: inline-block;
-        margin-left: 5px;
-    }
-    .menu-list a{
-        display: inline-block;
-        color: #707584;
-        font-size: 17px;
-        font-weight: bolder;
-        padding: 6px 14px 9px 13px;
-        letter-spacing: -1px;
-    }
+.logo h1{
+    margin: 0;
+    height: 60px;
+}
+.logo{
+    float: left;
+    position: relative;
+    display: block;
+    text-indent: -99999px;
+    width: 272px;
+    height: 60px;
+    background: url(/image/Logo.png) no-repeat;
+    overflow: hidden;
+    margin-left: -3px;
+    margin: 0;
+}
+#menu{
+    float: right;
+}
+.menu-list li{ 
+    display: inline-block;
+    margin-left: 5px;
+}
+.menu-list a{
+    display: inline-block;
+    color: #707584;
+    font-size: 17px;
+    font-weight: bolder;
+    padding: 6px 14px 9px 13px;
+    letter-spacing: -1px;
 }
 @media screen and (max-width: 768px){
     .logo{
@@ -217,8 +225,7 @@ input::placeholder{
 /* End Header Navigation */
 /* Main */
 .main-wrapper{
-    background: url(/image/Row-bg.png) no-repeat;
-    background-size: cover ;
+    background: #1b1e265f;
     padding: 20px;
     margin-right: 4px;
     margin-bottom: 21px;
@@ -235,12 +242,10 @@ input::placeholder{
     background: #ffffff;
 }
 
-@media all and (min-width: 1000px){
-    .main-content{
-        width: 70.8%;
-        float: left;
-        padding: 0 21px 0 20px;
-    }
+.main-content{
+    width: 640px;
+    float: left;
+    padding: 0 21px 0 20px;
 }
 @media screen and (max-width: 768px){
     .main-content{
@@ -267,23 +272,27 @@ input::placeholder{
 }
 .main-paragraph p{
     line-height: 16px;
+    margin: 0 0 12px 0;
 }
-.main-paragraph blockquote{
-    padding: 20px 20px 24px;
-    margin: 0;
+.main-paragraph .blockquote{
+    padding: 20px;
+    margin: 0 0 12px 0;
     background: #eef0f5;
     border: 1px solid #ced1da;
     color: #788093;
+    font-weight: bold;
+    font-style: italic;
+}
+.main-paragraph .blockquote p{
+    margin: 0;
 }
 /* End Main Contemt */
 /* Side-Bar */
 
-@media all and (min-width: 1000px){
-    .side-bar{
-        width: 29.2%;
-        float: right;
-        background: #eef0f5;
-    }
+.side-bar{
+    width: 267px;
+    float: right;
+    background: #eef0f5;
 }
 @media screen and (max-width: 768px){
     .side-bar{
@@ -305,14 +314,16 @@ input::placeholder{
     background: #9097a9 url(/image/icon/side/1.png) no-repeat 9px 12px;
 }
 .logo-brower{
-    max-width: 100%;
-    height: auto;
+    width: 222px;
+    height: 89px;
+}
+.guest-section{
+    padding: 20px 20px 20px 23px;
 }
 .icon-brower{
-    padding: 20px 20px 6px 20px;
+    padding-bottom: 6px;
 }
 .guest-content{
-    padding: 0 20px 21px 22px;
     line-height: 17px;
 }
 .guest-content p{
@@ -334,18 +345,29 @@ input::placeholder{
     width: 100%;
     margin-bottom: 2px;
 }
-
-@media all and (min-width: 1000px){
+.navigation-list li a {
+    display: block;
+    color: #747c93;
+    text-decoration: none;
+    padding: 14px 0px 14px 13px;
+    background:#dce0e9 url(/image/icon/side/icon_arrow.png) no-repeat 93% 50%;
+}
+.navigation-list li a:hover{
+    color: #444d68;
+    background: #d0d4de url(/image/icon/side/icon_arrow_active.png) no-repeat 93% 50%;
+    width: 100%;
+}
+@media screen and (max-width: 800px){
     .navigation-list li a {
         display: block;
         color: #747c93;
         text-decoration: none;
-        padding: 14px 0px 14px 13px;
-        background:#dce0e9 url(/image/icon/side/icon_arrow.png) no-repeat 225px 50%;
+        padding: 14px 20px 14px 13px;
+        background:#dce0e9 url(/image/icon/side/icon_arrow.png) no-repeat 740px 50%;
     }
     .navigation-list li a:hover{
         color: #444d68;
-        background: #d0d4de url(/image/icon/side/icon_arrow_active.png) no-repeat 225px 50%;
+        background: #d0d4de url(/image/icon/side/icon_arrow_active.png) no-repeat 740px 50%;
         width: 100%;
     }
 }
@@ -469,8 +491,8 @@ input::placeholder{
     display: inline-block;
 }
 .network-list img{
-    max-width: 100%;
-    height: auto;
+    width: 32px;
+    height: 32px;
 }
 /* End Side Bar */
 /* Footer */
@@ -478,13 +500,13 @@ input::placeholder{
 .footer-navigation{
     background: #0f131f;
     border-bottom: 1px solid #040507;
-    padding-bottom: 23px;
+    padding: 30px 0 23px;
 }
 .footer-navigation h3{
     color: #8c94ac;
     font-size: 22px;
     margin: 0;
-    padding: 30px 0 24px;
+    padding: 0 0 24px;
     font-family: Arial;
 }
 .footer-navigation:before,
@@ -505,25 +527,19 @@ input::placeholder{
 .footer-navigation-center h3{
     padding-bottom: 22px;
 }
-
-@media all and (min-width: 1000px){
-    .footer-navigation-left{
-        width: 33.33%;
-        float: left;
-    }
-    .footer-navigation-center{
-        width: 33.33%;
-        float: left;
-        padding-left: 22px;
-    }
-    .footer-navigation-right{
-        width: 33.33%;
-        float: left;
-        position: relative;
-    }
+.footer-navigation-left{
+    width: 33.33%;
+    float: left;
 }
-@media screen and(max-width: 768px){
-
+.footer-navigation-center{
+    width: 33.33%;
+    float: left;
+    padding-left: 22px;
+}
+.footer-navigation-right{
+    width: 33.33%;
+    float: left;
+    position: relative;
 }
 .footer-navigation-left:before,
 .footer-navigation-left:after{
@@ -540,13 +556,12 @@ input::placeholder{
     color: #9eaddb;
 }
 .navigation-left-col-1{
-    width: 50%;
+    width: 48%;
     float: left;
 }
 .navigation-left-col-2{
     width: 50%;
     float: left;
-    margin-left: -6px;
 }
 .about-footer-list{
     padding: 0;
@@ -578,8 +593,8 @@ input::placeholder{
     margin: 0px 0px -5px 0;
 }
 .gallery-footer-list img{
-    max-width: 100%;
-    height: auto;
+    width: 44px;
+    height: 41px;
 }
 .footer-navigation-right h3{
     padding-left: 14px;
@@ -602,7 +617,7 @@ input::placeholder{
     height: 0;
     position: absolute;
     left: 282px;
-    top: 56px;
+    top: 25px;
     border-right: 15px solid transparent;
     border-bottom: 17px solid #191f2f;
 }
@@ -648,15 +663,13 @@ input::placeholder{
 .footer-copyright:after{
     clear: both;
 }
-@media all and (min-width: 1000px){
-    .address{
-        float: left;
-        padding-top: 22px;
-    }
-    .footer-bottom-right{
-        float: right;
-        padding-top: 22px;
-    }
+.address{
+    float: left;
+    padding-top: 22px;
+}
+.footer-bottom-right{
+    float: right;
+    padding-top: 22px;
 }
 @media screen and (max-width: 768px){
     .address{
