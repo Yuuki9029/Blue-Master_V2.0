@@ -37,7 +37,6 @@ h2{
     background: url(/image/Top-bar.png) no-repeat;
     background-size: cover;
     height: 100%;
-    text-align: center;
     color: #485766;
     margin-bottom: 27px;    
     padding-top: 12px;
@@ -146,9 +145,26 @@ input::placeholder{
     right: 5px;
     cursor: pointer;
 }
-@media screen and (max-width: 1024px) and (min-width: 768px){
+.menu-top{
+    display: none;
+}
+@media screen and (max-width: 1024px) {
     .container{
         width: 100%;
+    }
+}
+@media screen and (max-width: 767px){
+     
+}
+@media screen and (max-width: 640px){
+    .header-left,
+    .header-right{
+        float: none;
+        margin: 0;
+    }
+    .header-right .list-social-network{
+        padding: 0;
+        display: none;
     }
 }
 /* End Header Top */
@@ -179,7 +195,7 @@ input::placeholder{
     margin-left: -3px;
     margin: 0;
 }
-#menu{
+.menu{
     float: right;
 }
 .menu-list li{ 
@@ -199,12 +215,40 @@ input::placeholder{
         float: none;
         margin: 0 auto;
     }
-    #menu{
+    .menu{
         float: none;
         text-align: center;
     }
     .menu-list li{  
         display: inline-block;
+    }
+}
+@media screen and (max-width: 640px){
+    .header{
+        position: relative;
+    }
+    .menu{
+        float: none;
+    }
+    .menu-list li{ 
+        display: block;
+        margin-left: 5px;
+    }
+    .menu-list a{
+        display: none;
+    }
+    .menu-top{
+        position: relative;
+        display: block;
+        font-size: 2em;
+    }
+    .nav-top{
+        position: absolute;
+        top: 0;
+        right: 30px;
+    }
+    .nav-top:hover{
+        color: #ffffff;
     }
 }
 .menu-list a:hover{
@@ -245,7 +289,6 @@ input::placeholder{
 @media screen and (max-width: 768px){
     .main-content{
         width: 100%;
-        padding: 0 21px 0 20px;
     }
 }
 .title-heading{
@@ -525,6 +568,20 @@ input::placeholder{
     float: left;
     position: relative;
 }
+@media screen and (max-width: 768px){
+    .footer-navigation-left,
+    .footer-navigation-center,
+    .footer-navigation-right{
+        float: none;
+        width: 100%;
+    }
+    .footer-navigation-left{
+        margin: 0 auto;
+    }
+    .footer-navigation-center{
+        padding: 0;
+    }
+}
 .footer-navigation-left:before,
 .footer-navigation-left:after{
     content: '';
@@ -547,6 +604,7 @@ input::placeholder{
     width: 50%;
     float: left;
 }
+
 .about-footer-list{
     padding: 0;
 }
@@ -558,6 +616,24 @@ input::placeholder{
 }
 .categories-footer-list span{
     color: #9da4b8;
+}
+@media screen and (max-width: 768px){
+    .navigation-left-col-1,
+    .navigation-left-col-2{
+        width: 100%;
+        float: none;
+    }
+    .about-footer-list li,
+    .categories-footer-list li{
+        display: inline-block;
+    }
+    .about-footer-list a,
+    .categories-footer-list a{
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 640px){
+    
 }
 .gallery-footer-list{
     list-style: none;
