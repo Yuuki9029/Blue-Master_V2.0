@@ -14,7 +14,7 @@ a{
     text-decoration: none;
 }
 #wrapper{
-    background: url(/image/bg.png) no-repeat;
+    background: url(../image/bg.png) no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -34,7 +34,7 @@ h2{
 }
 /* Heaader */
 .header-top-wrapper{
-    background: url(/image/Top-bar.png) no-repeat;
+    background: url(../image/Top-bar.png) no-repeat;
     background-size: cover;
     height: 100%;
     color: #485766;
@@ -138,7 +138,7 @@ input::placeholder{
 .search-button{
     width: 25px;
     height: 24px;
-    background: url(/image/icon/Icon-Top/search-icon.png) no-repeat;
+    background: url(../image/icon/Icon-Top/search-icon.png) no-repeat;
     border: 0;
     position: absolute;
     top: 15px;
@@ -152,9 +152,6 @@ input::placeholder{
     .container{
         width: 100%;
     }
-}
-@media screen and (max-width: 767px){
-     
 }
 @media screen and (max-width: 640px){
     .header-left,
@@ -190,7 +187,7 @@ input::placeholder{
     text-indent: -99999px;
     width: 272px;
     height: 60px;
-    background: url(/image/Logo.png) no-repeat;
+    background: url(../image/Logo.png) no-repeat;
     overflow: hidden;
     margin-left: -3px;
     margin: 0;
@@ -293,7 +290,7 @@ input::placeholder{
 }
 .title-heading{
     color: #4d5467;
-    background: url(/image/icon/images/1.png) no-repeat 0 0px;
+    background: url(../image/icon/images/1.png) no-repeat 0 0px;
     padding: 0 0 2px 37px;
     border-bottom: 1px dotted #84a1af;
     margin: 0 0 20px 0;
@@ -355,7 +352,7 @@ input::placeholder{
 }
 /* Guest Box */
 .guest-top{
-    background: #9097a9 url(/image/icon/side/1.png) no-repeat 9px 12px;
+    background: #9097a9 url(../image/icon/side/1.png) no-repeat 9px 12px;
 }
 .logo-brower{
     width: 222px;
@@ -381,7 +378,7 @@ input::placeholder{
 }
 /* End Box Guest */
 .navi-top{
-    background: #9097a9 url(/image/icon/side/2.png) no-repeat 12px 13px;
+    background: #9097a9 url(../image/icon/side/2.png) no-repeat 12px 13px;
 }
 .navigation-list{
     padding: 10px 10px 9px 10px;
@@ -400,16 +397,16 @@ input::placeholder{
     color: #747c93;
     text-decoration: none;
     padding: 14px 0px 14px 13px;
-    background:#dce0e9 url(/image/icon/side/icon_arrow.png) no-repeat 93% 50%;
+    background:#dce0e9 url(../image/icon/side/icon_arrow.png) no-repeat 93% 50%;
 }
 .navigation-list li a:hover{
     color: #444d68;
-    background: #d0d4de url(/image/icon/side/icon_arrow_active.png) no-repeat 93% 50%;
+    background: #d0d4de url(../image/icon/side/icon_arrow_active.png) no-repeat 93% 50%;
     width: 100%;
 }
 /* End Box Navigation */
 .categories-top{
-    background: #9097a9 url(/image/icon/side/3.png) no-repeat 12px 11px;
+    background: #9097a9 url(../image/icon/side/3.png) no-repeat 12px 11px;
 }
 .categories-list{
     padding: 19px 22px 11px 20px;
@@ -451,7 +448,7 @@ input::placeholder{
 }
 /* End Box Categories */
 .blog-top{
-    background: #9097a9 url(/image/icon/side/4.png) no-repeat 12px 13px;
+    background: #9097a9 url(../image/icon/side/4.png) no-repeat 12px 13px;
 }
 .blog-list{
     margin: 0;
@@ -494,7 +491,7 @@ input::placeholder{
 }
 /* End box Blog */
 .network-top{
-    background: #9097a9 url(/image/icon/side/5.png) no-repeat 12px 12px;
+    background: #9097a9 url(../image/icon/side/5.png) no-repeat 12px 12px;
 }
 .network-list{
     list-style: none;
@@ -664,7 +661,7 @@ input::placeholder{
     position: relative;
 }
 .btn-twitter{
-    background: url(/image/icon/Icon-Bottom/twitter.png) no-repeat;
+    background: url(../image/icon/Icon-Bottom/twitter.png) no-repeat;
     width: 45px;
     height: 21px;
     border: 0;
